@@ -26,12 +26,12 @@ int main()
         printf("Digite o nome da pessoa\n");
         scanf("%s",&*(p[i]).nome);
         printf("Digite a idade da pessoa\n");
-        scanf("%d",& p[i].idade);
+        scanf("%d",&p[i].idade);
         printf("Digite a altura da pessoa\n");
-        scanf("%f",& p[i].altura);
+        scanf("%f",&p[i].altura);
         getchar();
         quantidade++;
-        realloc(p,(sizeof(Pessoa)*quantidade));
+        p = (Pessoa *) realloc(p,(sizeof(Pessoa)*quantidade));
     }
     for(i=0;i<quantidade-1;i++)
     {
